@@ -1,0 +1,24 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 130px);
+  column-gap: 10%;
+  row-gap: 50px;
+  margin: 20px;
+  flex-direction: row;
+}
+.accueil-container {
+  display: grid;
+  grid-template-rows: 20% auto;
+}
+
+.recherche-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.recherche-container input, button {
+  width: 130px;
+  height: 70px;
+  margin-right: 30px;
+  font-size: 1.3em;
+}

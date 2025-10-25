@@ -1,0 +1,10 @@
+.Header-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.Header-container .links a{
+  margin: 30px;
+  font-size: 1.5em;
+    
+}
