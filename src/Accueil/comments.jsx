@@ -4,7 +4,7 @@ function Comments(){
         <>
             <div className="card-comments">
             <input type="text" />
-            <button> -> </button>
+            <button> click me  </button>
             </div>
 
         </>

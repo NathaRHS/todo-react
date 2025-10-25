@@ -48,7 +48,7 @@ function Card(props) {
           >
             {state}
           </div>
-          <button onClick={() => setLikes(likes + 1)}>liker</button>
+          <button onClick={() => setLikes(likes + 1)}>voir la surprise</button>
           <p>Date de creation {date}</p>
         </form>
       </div>

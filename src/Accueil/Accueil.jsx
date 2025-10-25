@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "./Header";
-import AjoutCard from "./AjoutCard";
-
+import AjoutCard from "./AjoutCardTemp";
 import Card from "./card";
 import "../App.css";
 

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Header from "./Header";
-
 import Card from "./card";
 import "../App.css";
 
@@ -35,12 +34,7 @@ function AjoutCard({ setCards }) {
         placeholder="date de fin"
         onChange={(e) => setInputDateValue(e.target.value)}
       />
-      <input
-        type="progression"
-        value={inputProgression}
-        placeholder="progression /100"
-        onChange={(e) => setInputProgression(e.target.value)}
-      />
+    
       <button onClick={ajouterCard}>ajouter</button>
     </div>
   );
