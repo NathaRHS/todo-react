@@ -27,6 +27,7 @@ function AjoutCard({ setCards }) {
         value={inputTacheValue}
         placeholder="la tache"
         onChange={(e) => setInputTacheValue(e.target.value)}
+        autoComplete="on"
       />
       <input
         type="date"

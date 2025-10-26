@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-function ImageChat() {
+function ImageChat({setLoading}) {
   const [image, setImage] = useState("");
   const [change, setChange] = useState(false);
   function changeImage() {
+    setLoading(true);
     setChange((prev) => !prev);
   }
 
@@ -14,6 +15,8 @@ function ImageChat() {
       .then((data) => {
         setImage(data[0].url);
         console.log(data[0].url);
+        setLoading(false);
+
       });
   }, [change]);
   return (

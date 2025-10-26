@@ -12,13 +12,34 @@
   height: auto;
   width: 160px;
   padding: 30px;
+  transition: all 0.8s;
+  border-radius: 20px;
+  font-family: "Poppins";
+}
+
+.container:hover {
+  background-color: #d3d3d3;
+  transform: translateY(-10px);
 }
 .card-comments {
   display: flex;
-} 
-.card-comments input{
-margin-bottom: 20px;
 }
-.card-comments button{
-  width: 50px;
+.card-comments input {
+  margin-bottom: 20px;
+}
+.card-comments button {
+  width:70px;
+  height: 20px;
+}
+
+form button{
+  width: 170px;
+  height:60px;
+}
+form h2{
+  text-transform: capitalize;
+}
+
+ .color{
+  width: 90px;
 }

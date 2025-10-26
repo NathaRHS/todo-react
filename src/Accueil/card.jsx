@@ -10,7 +10,10 @@ function Card(props) {
   const [likes, setLikes] = useState(0);
   const [colorLike, setcolorLike] = useState("green");
   const [state, setState] = useState("pas terminée");
-  const now = new Date(Date.now);
+  const [pos, setPos] = useState({ x: 0, y: 300 });
+  const [clicked, setCliked] = useState(false);
+  const now = new Date(Date.now());
+  const {setBlurLevel,tacheName} = props;
 
   const [date, setDate] = useState(
     now.toLocaleDateString("fr-FR", {
@@ -26,18 +29,37 @@ function Card(props) {
       state === "pas terminée" ? "terminée" : "pas terminée"
     );
   }
+  const mooveCenter = () => {
+    // setPos({ x: e.clientX + 120, y: e.clientY + 150 });
+    console.log("aoo");
+    setCliked((clicked) => clicked === false ?clicked = true:clicked = false)
+    console.log(clicked)
+    clicked?setBlurLevel(0):setBlurLevel(0);
+    
+  };
+
+  const styleClick = {
+    position:clicked?"fixed":"relative",
+    top:clicked === true ?"50%":"auto",
+    left:clicked === true ?"50%":"auto",
+    transform:clicked?"translate(50%,50%) scale(1.4)":"translate(0%,0%) scale(1)  ",
+    zIndex: clicked ? 999 : "auto",
+    
+  }
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        onClick={mooveCenter}
+        style={styleClick}
+      >
         <form action="login" method="get">
-          Taches : {props.tacheName}
+          <h2>{tacheName}</h2>
           {/* <Comments></Comments> */}
-          <p>likes :{likes} </p>
           <div
             className="color"
             style={{
               background: colorLike,
-              width: "70px",
               borderRadius: "10px",
               marginBottom: "15px",
               cursor: "pointer",
